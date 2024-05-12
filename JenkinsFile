@@ -32,13 +32,13 @@ pipeline {
                     file_to_check="index.html"
 
                     # Check if the file exists in the build directory
-                    if [ -f "$build_dir/$file_to_check" ]; then
+                    if [ -f "/$build_dir/$file_to_check" ]; then
                         echo "The file '$file_to_check' exists in the build directory."
                     else
                         echo "The file '$file_to_check' does not exist in the build directory."
                     fi
 
-                    npm test a
+                    npm test
                 '''
             }
         }
