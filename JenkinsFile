@@ -21,5 +21,24 @@ pipeline {
                 '''
             }
         }
+        stage('Test'){
+            sh '''
+
+                # Define the path to the build directory
+                build_dir="build"
+
+                # Define the name of the file to check
+                file_to_check="index.html"
+
+                # Check if the file exists in the build directory
+                if [ -f "$build_dir/$file_to_check" ]; then
+                    echo "The file '$file_to_check' exists in the build directory."
+                else
+                    echo "The file '$file_to_check' does not exist in the build directory."
+                fi
+
+                npm test a
+            '''
+        }
     }
 }
