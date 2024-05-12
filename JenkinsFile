@@ -14,10 +14,6 @@ pipeline {
                     ls -la
                     node --version
                     npm --version
-                    fetch-retry-factor = 10
-                    fetch-retry-maxtimeout = 60000
-                    fetch-retry-mintimeout = 10000
-                    fetch-timeout = 300000
                     npm ci
                     npm run build
                     ls -la
