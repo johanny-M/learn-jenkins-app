@@ -23,8 +23,13 @@ pipeline {
         stage('Test'){
             steps{
                 sh '''
+<<<<<<< HEAD
                     echo 'Testing Stage'
                     test -f build/index.html
+=======
+                    test -f build/index.html
+                    echo 'Testing stage ....'
+>>>>>>> 3c7c07a (add: "added and edited test stage for the pipeline ")
                     npm test
                 '''
             }
